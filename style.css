@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    /* overflow-x: hidden; */
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    height: calc(100vh - 78px);
+    padding: 8px;
+    gap: 8px;
+}
+
+.sidebar {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-box,
+.library-box {
+    background-color: #121212;
+    border-radius: 10px;
+}
+
+.nav-box {
+    padding: 0.9rem 1rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0.35rem;
+    color: #b3b3b3;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-item.active,
+.nav-item:hover {
+    color: #fff;
+}
+
+.library-box {
+    flex: 1;
+    overflow: hidden;
+    padding: 1rem 0.6rem;
+}
+
+.library-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.6rem;
+    margin-bottom: 1rem;
+    color: #b3b3b3;
+}
+
+.library-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.library-title img {
+    width: 1.2rem;
+    opacity: 0.8;
+}
+
+.library-actions {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.library-card {
+    background-color: #242424;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0 0.45rem 0.8rem;
+}
+
+.library-card h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+}
+
+.library-card p {
+    font-size: 0.8rem;
+    color: #e0e0e0;
+    margin-bottom: 0.95rem;
+}
+
+.library-card button {
+    border: none;
+    border-radius: 999px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.78rem;
+    padding: 0.45rem 0.95rem;
+    cursor: pointer;
+}
+
+.content {
+    flex: 1;
+    background: linear-gradient(180deg, #1f1f1f 0%, #121212 28%, #121212 100%);
+    border-radius: 10px;
+    overflow: auto;
+    padding: 0 1.45rem 2rem;
+}
+
+.content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #303030;
+    border-radius: 999px;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 0 0.8rem;
+    background-color: #121212;
+}
+
+.nav-arrows,
+.nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.circle-btn {
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #0a0a0a;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.circle-btn img {
+    width: 0.95rem;
+    opacity: 0.75;
+}
+
+.badge {
+    border: none;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.5rem 0.95rem;
+    cursor: pointer;
+}
+
+.badge.light {
+    background-color: #fff;
+    color: #000;
+}
+
+.badge.dark {
+    background-color: #000;
+    color: #fff;
+}
+
+.badge.dark i {
+    margin-right: 0.4rem;
+}
+
+.profile-btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+section h2 {
+    font-size: 1.45rem;
+    margin: 1.1rem 0 0.9rem;
+}
+
+.cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.15rem;
+}
+
+.card {
+    width: 180px;
+    background-color: #171717;
+    border-radius: 10px;
+    padding: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.card:hover {
+    background-color: #232323;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.85rem;
+}
+
+.card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 0.75rem;
+    color: #b3b3b3;
+    line-height: 1.35;
+}
+
+.music-player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 78px;
+    background-color: #000;
+    border-top: 1px solid #262626;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 1rem;
+    gap: 1rem;
+}
+
+.player-left,
+.player-right {
+    width: 26%;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.player-center {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+}
+
+.album-cover {
+    width: 56px;
+    border-radius: 5px;
+}
+
+.song-info h4 {
+    font-size: 0.85rem;
+}
+
+.song-info p {
+    font-size: 0.72rem;
+    color: #b3b3b3;
+}
+
+.small-icon {
+    width: 1rem;
+    opacity: 0.75;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+.player-controls img {
+    width: 1rem;
+    opacity: 0.75;
+}
+
+.player-controls .play-btn {
+    width: 2rem;
+    opacity: 1;
+}
+
+.progress-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.progress-wrap span {
+    font-size: 0.7rem;
+    color: #b3b3b3;
+}
+
+input[type="range"] {
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 999px;
+    background-color: #4d4d4d;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #1db954;
+}
+
+.player-right img {
+    width: 1rem;
+    opacity: 0.75;
+}
+
+.player-right input[type="range"] {
+    width: 95px;
+}
+
+@media (max-width: 960px) {
+    .sidebar {
+        width: 280px;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .player-right {
+        display: none;
+    }
+
+    .player-left {
+        width: 35%;
+    }
+
+    .player-center {
+        width: 65%;
+    }
+}
+
+@media (max-width: 720px) {
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        padding: 0 1rem 2rem;
+    }
+
+    .player-left {
+        width: 45%;
+    }
+
+    .player-center {
+        width: 55%;
+    }
+
+    .small-icon {
+        display: none;
+    }
+}
